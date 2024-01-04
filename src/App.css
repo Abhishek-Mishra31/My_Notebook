@@ -32,7 +32,21 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.form {
+  border: 3px solid peru;
+  border-radius: 25px 35px;
+}
+
+.login{
+  background-color: #8c9fc7;
+}
+
+.signup{
+  background-color:rgb(181, 243, 168);
 }
