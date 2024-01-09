@@ -40,8 +40,8 @@ router.post(
         });
 
         const data = {
-          User: {
-            id: user.id,
+          user: {
+            id: user._id,
           },
         };
 
@@ -85,17 +85,15 @@ router.post(
         return res
           .status(400)
           .json({ error: "Please login with correct credentials" });
-      } else {
-        const data = {
-          User: {
-            id: User.id,
-          },
-        };
-
-        const authToken = jwt.sign(data, JWT_SECRET);
-        success = true;
-        res.json({ success, authToken });
       }
+      const data = {
+        user: {
+          id: user._id,
+        },
+      };
+      const authToken = jwt.sign(data, JWT_SECRET);
+      success = true;
+      res.json({ success, authToken });
     } catch (error) {
       res.status(500).send("Internal Server Error");
     }
@@ -107,8 +105,7 @@ router.post(
 router.post("/getuser", Fetchuser, async (req, res) => {
   try {
     const userId = req.user;
-    const user = await User.findOne(userId).select("-password");
-    console.log(user);
+    const user = await User.findById(userId.id).select("-password");
     res.send(user);
   } catch (error) {
     console.log(error.message);

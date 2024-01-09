@@ -15,8 +15,6 @@ function NoteState(props) {
         mode: "cors",
         "Content-Type": "application/json",
         "auth-token": localStorage.getItem("token"),
-        // "auth-token":
-        //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjp7fSwiaWF0IjoxNzA0Mzc1MjUzfQ.LA8POEy3b_yesDbtlxVX15w09f68c3u1VUe-YCMHhXQ",
       },
     });
     const json = await response.json();

@@ -7,7 +7,7 @@ const Note = require("../Models/Note");
 // ROUTE 1: Get All the Notes using: GET "/api/notes/getNotes". Login required
 router.get("/getNotes", Fetchuser, async (req, res) => {
   try {
-    const notes = await Note.find({ user: req.User });
+    const notes = await Note.find({ user: req.user.id });
     res.json(notes);
   } catch (error) {
     console.error(error.message);
@@ -36,7 +36,7 @@ router.post(
         Title,
         description,
         tag,
-        user: req.user,
+        user: req.user.id,
       });
 
       const savedNote = await note.save();
@@ -71,7 +71,7 @@ router.put("/updatenote/:id", Fetchuser, async (req, res) => {
       return res.status(404).send("Not Found ");
     }
 
-    if (note.user !== req.user) {
+    if (note.user.toString() !== req.user.id) {
       return res.status(401).send("Not Allowed");
     }
 
@@ -97,7 +97,7 @@ router.delete("/deletenotes/:id", Fetchuser, async (req, res) => {
       return res.status(404).send("Not Found ");
     }
 
-    if (note.user !== req.user) {
+    if (note.user.toString() !== req.user.id) {
       return res.status(401).send("Not Allowed");
     }
 
