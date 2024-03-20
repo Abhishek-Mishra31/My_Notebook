@@ -33,7 +33,7 @@ export const Addnote = (props) => {
               name="Title"
               value={notes.Title}
               onChange={onChange}
-              required
+
             />
           </div>
           <div className="mb-3">
@@ -71,7 +71,7 @@ export const Addnote = (props) => {
               type="submit"
               onClick={add}
               className="btn btn-primary"
-              disabled={notes.Title.length < 5 || notes.Description.length < 5}
+              disabled={notes.Title.length < 1 || notes.Description.length < 1}
             >
               Add Note
             </button>

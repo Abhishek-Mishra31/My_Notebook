@@ -18,7 +18,7 @@ const Login = (props) => {
         email: details.email,
         password: details.password,
       }),
-    });
+    });  
     const json = await response.json();
     if (json.success) {
       // save the auth-token and redirect to note component

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Lato:wght@300;400&family=PT+Sans:ital@1&family=Ubuntu:ital,wght@1,300&family=Work+Sans&display=swap');
+
+
 .App {
   text-align: center;
 }
@@ -43,10 +46,62 @@
   border-radius: 25px 35px;
 }
 
-.login{
+.login {
   background-color: #8c9fc7;
 }
 
-.signup{
-  background-color:rgb(181, 243, 168);
+.signup {
+  background-color: rgb(181, 243, 168);
+}
+
+.about {
+  /* background-color: #808ead; */
+}
+
+.about h4 {
+  font-family: 'Lato', sans-serif;
+}
+
+
+.about p {
+  font-size: 20px;
+  font-family: 'Agbalumo', system-ui;
+}
+
+.Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 150px;
+  width: 100%;
+  /* border: 3px solid green; */
+  background-color: #282c34;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: antiquewhite;
+}
+
+.links a {
+  padding: 20px;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.links p {
+  margin: auto;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contactImg {
+  height: 80px;
+  width: 150px;
 }

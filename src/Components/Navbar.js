@@ -73,7 +73,7 @@ export default function Navbar() {
             <Link
               to="/login"
               className="btn btn-primary mx-2"
-              tabindex="-1"
+              tabIndex="-1"
               role="button"
               aria-disabled="true"
             >
@@ -83,7 +83,7 @@ export default function Navbar() {
             <Link
               to="/signup"
               className="btn btn-primary"
-              tabindex="-1"
+              tabIndex="-1"
               role="button"
               aria-disabled="true"
             >
