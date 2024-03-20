@@ -1,4 +1,4 @@
-=> in this app you can add , get , update and delete your all notes which in on databases like MongoDB using a login and signup options availble , in this app i used reactJS , Express-JS , Json Web Token , MongoDB , Bcrypt , Bootstrap , and CSS .
+=> in this app you can add , get , update and delete your all notes which in on databases like MongoDB using a login and signup options available , in this app i used reactJS , Express-JS , Json Web Token , MongoDB , Bcrypt , Bootstrap , and CSS .
 
 # Getting Started with Create React App
 
